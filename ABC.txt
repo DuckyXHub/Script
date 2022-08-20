@@ -1,0 +1,352 @@
+if game.PlaceId == 7294019016 then
+local HwidCheckDucky = "E6799585-302C-42B3-8BF0-C9FC57B95897"
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
+local Key = "TB3FQ12B"
+
+
+
+if _G.Key == Key then
+    if HwidCheckDucky == game:GetService("RbxAnalyticsService"):GetClientId() then
+        local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+        local Win = DiscordLib:Window("Ducky Hub VIP+")
+        local TabG = Win:Server("Main", "")
+        
+        
+        if not game.Workspace:FindFirstChild("Ducky Hub Number 1") then
+            local Part = Instance.new("Part",game.Workspace)
+            Part.Anchored = true
+            Part.CanCollide = true
+            Part.Name = "Ducky Hub Number 1"
+            Part.CFrame = CFrame.new(-1534.46497, 20714.7207, 10637.9971, 0.999460995, -0.00225382787, 0.0327517428, 8.38672953e-09, 0.99764061, 0.0686528906, -0.032829199, -0.0686158836, 0.997102857)
+            Part.Transparency = 0.7
+            Part.Size = Vector3.new(30,1,30)
+        end
+        
+        
+        local CH1 = TabG:Channel("Auto Fram")
+        
+        
+        CH1:Toggle("Auto Lvl" , false, function(AutoLvl)
+            _G.AutoLvl = AutoLvl
+        end)
+        
+        
+        spawn(function()
+            while wait() do
+                pcall(function()
+                    if _G.AutoLvl == true then
+                        if not game.Players.LocalPlayer.Backpack:FindFirstChild("Candy 50000000 Exp") then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["Ducky Hub Number 1"].CFrame * CFrame.new(0,3.5,0)
+                            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Candy 50000000 Exp","Inv")
+                        elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Candy 50000000 Exp") then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["Ducky Hub Number 1"].CFrame * CFrame.new(0,3.5,0)
+                            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Candy 50000000 Exp"))
+                            game:GetService("VirtualUser"):CaptureController()
+                            game:GetService("VirtualUser"):Button1Down(Vector2.new(0 ,0))
+                        end
+                    end
+                end)
+            end
+        end)
+        
+        
+        CH1:Toggle("Auto Money(KoKo Only)" , false, function(KoKoPack)
+            if KoKoPack then
+                _G.AutoBeli = true
+                while _G.AutoBeli == true do wait(.25)
+                    pcall(function()
+                        if not game.Players.LocalPlayer.Character:FindFirstChild("KoKo") then
+                            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("KoKo"))
+                        elseif game.Players.LocalPlayer.Character:FindFirstChild("KoKo") then
+                            game.Players.LocalPlayer.Character.KoKo.Triple.Fire:FireServer(game:GetService("Players").LocalPlayer)
+                        end
+                    end)
+                end
+            else
+                _G.AutoBeli = false
+            end
+        end)
+        
+        
+        spawn(function()
+            while wait() do
+                pcall(function()
+                    if _G.AutoBeli == true then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5403.2793, 485.970734, 1459.93091, -0.703476608, 3.31345262e-09, 0.710718393, -8.88649865e-09, 1, -1.34580675e-08, -0.710718393, -1.57832343e-08, -0.703476608)
+                    end
+                end)
+            end
+        end)
+        
+        
+        if _G.SuperMoney == true then
+            CH1:Toggle("Fast Money" , false, function(KoKoPack)
+                if KoKoPack then
+                    _G.SuperFastFram = true
+                    while _G.SuperFastFram == true do wait(.25)
+                        pcall(function()
+                            if _G.AutoBeli == true then
+                                if game.Workspace["Roger Boss"].Humanoid.Health == 9750000 or game.Workspace["Roger Boss"].Humanoid.Health <= 9750000 then
+                                    game.Workspace["Roger Boss"].Humanoid.Health = 0
+                                end
+                            end
+                        end)
+                    end
+                else
+                    _G.SuperFastFram = false
+                end
+            end)
+        end
+        
+        CH1:Toggle("Delete Koko Effect" , false, function(KoKoDel)
+            if KoKoDel then
+                _G.AutoDelete = true
+                while _G.AutoDelete == true do wait()
+                    pcall(function()
+                        game.Workspace.SlashFX1:Destroy()
+                        game.Workspace.SlashFX:Destroy()
+                    end)
+                end
+            else
+                _G.AutoDelete = false
+            end
+        end)
+        
+        
+        CH1:Button("Fix Auto Money" ,function()
+            game.Workspace["Roger Boss"].Humanoid.Health = 0
+        end)
+        
+        
+        local CH2 = TabG:Channel("Spawn Fruits")
+        
+        
+        CH2:Button("Magma Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Magma Magma Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Mera Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Mera Mera Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Ope Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","OpeFruit","Inv")
+        end)
+        
+        
+        CH2:Button("Dough Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","DoughFruit","Inv")
+        end)
+        
+        
+        CH2:Button("Light Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Light Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Gura Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Gura Gura Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Monk Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Monk Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Venom Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","VenomFruit","Inv")
+        end)
+        
+        
+        CH2:Button("Soul Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Soul Soul Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Gum Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Gum Gum Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Paw Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Paw Paw Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Dark Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Dark Dark Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Ice Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","ice ice Fruit","Inv")
+        end)
+        
+        
+        CH2:Button("Door Fruit" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Door Door Fruit","Inv")
+        end)
+        
+        
+        local CH3 = TabG:Channel("Spawn Sword")
+        
+        
+        CH3:Button("Florentino" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Florentino Box","Inv")
+        end)
+        
+        
+        CH3:Button("SwordRoger" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","SwordRoger Box","Inv")
+        end)
+        
+        
+        CH3:Button("Muramasa" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Muramasa Box","Inv")
+        end)
+        
+        
+        CH3:Button("Bisento" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Bisento Box","Inv")
+        end)
+        
+        
+        CH3:Button("Katakuri" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Katakuri Box","Inv")
+        end)
+        
+        
+        CH3:Button("RaidenSword" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","RaidenSword Box","Inv")
+        end)
+        
+        
+        CH3:Button("TrippleYoru" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","TrippleYoru Box","Inv")
+        end)
+        
+        
+        CH3:Button("Yoru" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Yoru Box","Inv")
+        end)
+        
+        
+        CH3:Button("Rainbow Yoru" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Rainbow Yoru Box","Inv")
+        end)
+        
+        
+        local CH4 = TabG:Channel("Spawn Melee")
+        
+        
+        CH4:Button("Dragon Punch" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","DragonPunch Box","Inv")
+        end)
+        
+        
+        CH4:Button("Shark Punch" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","SharkPunch Box","Inv")
+        end)
+        
+        
+        local CH5 = TabG:Channel("Spawn Accessory")
+        
+        
+        CH5:Button("BerserkerHelmet" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","BerserkerHelmet Box","Inv")
+        end)
+        
+        
+        CH5:Button("Kokowa" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Kokowa Box","Inv")
+        end)
+        
+        
+        CH5:Button("Darth Vader" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Darth Vader Box","Inv")
+        end)
+        
+        
+        CH5:Button("HatKnight" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","HatKnight Box","Inv")
+        end)
+        
+        
+        CH5:Button("Hat Straw" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Hat Straw Box","Inv")
+        end)
+        
+        
+        CH5:Button("BlackCape" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","BlackCape Box","Inv")
+        end)
+        
+        
+        local CH6 = TabG:Channel("Spawn Item")
+        
+        
+        CH6:Toggle("Loop Spawn Emerald" , false, function(EmeraldLoop)
+            _G.AutoEmerald = EmeraldLoop
+        end)
+        
+        
+        spawn(function()
+            while wait() do
+                pcall(function()
+                    if _G.AutoEmerald == true then
+                        game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Emerald","Inv")
+                    end
+                end)
+            end
+        end)
+        
+        
+        CH6:Button("Emerald" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Emerald","Inv")
+        end)
+        
+        
+        CH6:Toggle("Loop Spawn FingerSukuna" , false, function(FingerSukuna)
+            _G.AutoFingerSukuna = FingerSukuna
+        end)
+        
+        
+        spawn(function()
+            while wait() do
+                pcall(function()
+                    if _G.AutoFingerSukuna == true then
+                        game:GetService("ReplicatedStorage").Inventory:FireServer("Change","fingerSukuna","Inv")
+                    end
+                end)
+            end
+        end)
+        
+        
+        CH6:Button("FingerSukuna" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","fingerSukuna","Inv")
+        end)
+        
+        
+        CH6:Button("Inf Stone Set" ,function()
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Glove","Inv")
+            wait(.1)
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Stone Red","Inv")
+            wait(.1)
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Stone Blue","Inv")
+            wait(.1)
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Stone Orange","Inv")
+            wait(.1)
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Stone Purple","Inv")
+            wait(.1)
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Stone Green","Inv")
+            wait(.1)
+            game:GetService("ReplicatedStorage").Inventory:FireServer("Change","Stone Yellow","Inv")
+        end)
+    else
+        game.Players.LocalPlayer:Kick("No Key / Hwid")
+    end
+end
+end
